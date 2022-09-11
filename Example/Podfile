@@ -1,9 +1,13 @@
+source 'git@github.com:WuDiTangYuan/MyPodRepo.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
 platform :ios, '10.0'
 
 target 'MyDemoLib_Example' do
   pod 'MyDemoLib', :path => '../'
+  # pod 'MyDemoLib', '0.2.0'
 
   target 'MyDemoLib_Tests' do
     inherit! :search_paths

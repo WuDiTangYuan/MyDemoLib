@@ -10,7 +10,10 @@
 #endif
 #endif
 
-#import "DemoObject.h"
+#import "DemoDatabase.h"
+#import "UIImage+HX.h"
+#import "DemoLayout.h"
+#import "DemoNetwork.h"
 
 FOUNDATION_EXPORT double MyDemoLibVersionNumber;
 FOUNDATION_EXPORT const unsigned char MyDemoLibVersionString[];

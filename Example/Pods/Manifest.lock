@@ -19,10 +19,18 @@ PODS:
   - FMDB/standard (2.7.5)
   - Masonry (1.1.0)
   - MyDemoLib (0.1.0):
-    - AFNetworking
+    - MyDemoLib/DemoDatabase (= 0.1.0)
+    - MyDemoLib/DemoImage (= 0.1.0)
+    - MyDemoLib/DemoLayout (= 0.1.0)
+    - MyDemoLib/DemoNetwork (= 0.1.0)
+  - MyDemoLib/DemoDatabase (0.1.0):
     - FMDB
-    - Masonry
+  - MyDemoLib/DemoImage (0.1.0):
     - SDWebImage
+  - MyDemoLib/DemoLayout (0.1.0):
+    - Masonry
+  - MyDemoLib/DemoNetwork (0.1.0):
+    - AFNetworking
   - SDWebImage (5.13.2):
     - SDWebImage/Core (= 5.13.2)
   - SDWebImage/Core (5.13.2)
@@ -31,7 +39,7 @@ DEPENDENCIES:
   - MyDemoLib (from `../`)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - FMDB
     - Masonry
@@ -45,9 +53,9 @@ SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MyDemoLib: d21c2213e50830cea24a9e0ad35f36440cdc64a8
+  MyDemoLib: e015a81b461f90ce8618e21c35aedff10eca9d94
   SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
 
-PODFILE CHECKSUM: 9c8a7b66ee2593a86d50616795891f6e522c5e76
+PODFILE CHECKSUM: 8ff685e2c4eaf8d4ec85ec628fae5ec739805b77
 
 COCOAPODS: 1.11.3

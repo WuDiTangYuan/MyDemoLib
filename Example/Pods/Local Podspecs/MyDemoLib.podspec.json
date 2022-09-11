@@ -19,25 +19,66 @@
     "ios": "10.0"
   },
   "requires_arc": true,
-  "source_files": "MyDemoLib/Classes/**/*",
-  "public_header_files": "MyDemoLib/Classes/**/*.h",
-  "resource_bundles": {
-    "MyDemoLib": [
-      "MyDemoLib/Assets/*.png"
-    ]
-  },
-  "dependencies": {
-    "AFNetworking": [
+  "subspecs": [
+    {
+      "name": "DemoNetwork",
+      "source_files": "MyDemoLib/Classes/DemoNetwork/**/*",
+      "dependencies": {
+        "AFNetworking": [
 
-    ],
-    "SDWebImage": [
+        ]
+      },
+      "resource_bundles": {
+        "DemoNetwork": [
+          "MyDemoLib/Assets/DemoNetwork/*.png"
+        ]
+      },
+      "public_header_files": "MyDemoLib/Classes/DemoNetwork/**/*.h"
+    },
+    {
+      "name": "DemoImage",
+      "source_files": "MyDemoLib/Classes/DemoImage/**/*",
+      "dependencies": {
+        "SDWebImage": [
 
-    ],
-    "Masonry": [
+        ]
+      },
+      "resource_bundles": {
+        "DemoImage": [
+          "MyDemoLib/Assets/DemoImage/*.png"
+        ]
+      },
+      "public_header_files": "MyDemoLib/Classes/DemoImage/**/*.h"
+    },
+    {
+      "name": "DemoLayout",
+      "source_files": "MyDemoLib/Classes/DemoLayout/**/*",
+      "dependencies": {
+        "Masonry": [
 
-    ],
-    "FMDB": [
+        ]
+      },
+      "resource_bundles": {
+        "DemoLayout": [
+          "MyDemoLib/Assets/DemoLayout/*.png"
+        ]
+      },
+      "public_header_files": "MyDemoLib/Classes/DemoLayout/**/*.h"
+    },
+    {
+      "name": "DemoDatabase",
+      "source_files": "MyDemoLib/Classes/DemoDatabase/**/*",
+      "dependencies": {
+        "FMDB": [
 
-    ]
-  }
+        ]
+      },
+      "resource_bundles": {
+        "DemoDatabase": [
+          "MyDemoLib/Assets/DemoDatabase/*.png"
+        ]
+      },
+      "public_header_files": "MyDemoLib/Classes/DemoDatabase/**/*.h"
+    }
+  ]
 }

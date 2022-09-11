@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MyDemoLib'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A short description of MyDemoLib.'
 
 # This description is used to generate tags and improve search results.
@@ -32,18 +32,39 @@ TODO: Add long description of the pod here.
 
   s.requires_arc = true
 
-  s.source_files = 'MyDemoLib/Classes/**/*'
+  s.subspec 'DemoNetwork' do |sp|
+    sp.source_files = 'MyDemoLib/Classes/DemoNetwork/**/*'
+    sp.dependency 'AFNetworking'
+    sp.resource_bundles = {
+      'DemoNetwork' => ['MyDemoLib/Assets/DemoNetwork/*.png']
+    }
+    sp.public_header_files = 'MyDemoLib/Classes/DemoNetwork/**/*.h'
+  end
 
-  s.public_header_files = 'MyDemoLib/Classes/**/*.h'
-  
-  s.resource_bundles = {
-    'MyDemoLib' => ['MyDemoLib/Assets/*.png']
-  }
+  s.subspec 'DemoImage' do |sp|
+    sp.source_files = 'MyDemoLib/Classes/DemoImage/**/*'
+    sp.dependency 'SDWebImage'
+    sp.resource_bundles = {
+      'DemoImage' => ['MyDemoLib/Assets/DemoImage/*.png']
+    }
+    sp.public_header_files = 'MyDemoLib/Classes/DemoImage/**/*.h'
+  end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'AFNetworking'
-  s.dependency 'SDWebImage'
-  s.dependency 'Masonry'
-  s.dependency 'FMDB'
+  s.subspec 'DemoLayout' do |sp|
+    sp.source_files = 'MyDemoLib/Classes/DemoLayout/**/*'
+    sp.dependency 'Masonry'
+    sp.resource_bundles = {
+      'DemoLayout' => ['MyDemoLib/Assets/DemoLayout/*.png']
+    }
+    sp.public_header_files = 'MyDemoLib/Classes/DemoLayout/**/*.h'
+  end
+
+  s.subspec 'DemoDatabase' do |sp|
+    sp.source_files = 'MyDemoLib/Classes/DemoDatabase/**/*'
+    sp.dependency 'FMDB'
+    sp.resource_bundles = {
+      'DemoDatabase' => ['MyDemoLib/Assets/DemoDatabase/*.png']
+    }
+    sp.public_header_files = 'MyDemoLib/Classes/DemoDatabase/**/*.h'
+  end
 end
