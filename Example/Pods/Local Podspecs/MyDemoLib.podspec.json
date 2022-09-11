@@ -1,0 +1,43 @@
+{
+  "name": "MyDemoLib",
+  "version": "0.1.0",
+  "summary": "A short description of MyDemoLib.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zhanghuixin/MyDemoLib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhanghuixin": "huixin.zhang815@gmail.com"
+  },
+  "source": {
+    "git": "git@github.com:WuDiTangYuan/MyDemoLib.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "requires_arc": true,
+  "source_files": "MyDemoLib/Classes/**/*",
+  "public_header_files": "MyDemoLib/Classes/**/*.h",
+  "resource_bundles": {
+    "MyDemoLib": [
+      "MyDemoLib/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "AFNetworking": [
+
+    ],
+    "SDWebImage": [
+
+    ],
+    "Masonry": [
+
+    ],
+    "FMDB": [
+
+    ]
+  }
+}

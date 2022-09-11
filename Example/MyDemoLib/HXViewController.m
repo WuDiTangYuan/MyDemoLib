@@ -7,6 +7,7 @@
 //
 
 #import "HXViewController.h"
+#import <MyDemoLib/DemoObject.h>
 
 @interface HXViewController ()
 
@@ -18,6 +19,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    DemoObject *obj = [[DemoObject alloc] initWithName:@"张三"];
+    NSLog(@"init success");
+
+
 }
 
 - (void)didReceiveMemoryWarning
